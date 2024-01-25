@@ -1,0 +1,27 @@
+/* Styling for Login Page */
+.login-page {
+  background-color: purple;
+  color: white;
+}
+
+.login-form {
+  /* Add your login form styles here */
+}
+
+.login-button {
+  /* Add your login button styles here */
+}
+
+/* Styling for Signup Page */
+.signup-page {
+  background-color: purple;
+  color: white;
+}
+
+.signup-form {
+  /* Add your signup form styles here */
+}
+
+.signup-button {
+  /* Add your signup button styles here */
+}

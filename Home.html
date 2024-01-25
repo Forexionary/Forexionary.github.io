@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="search.js"></script>
+    <link rel="icon" href="F.png" type="image/x-icon">
+    <title>Forexionary - Your Forex Dictionary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+        }
+        /* CSS for the hover effect on social media icons */
+        
+        .social-icon {
+            font-size: 24px;
+            color: #FF3355;
+            margin: 0 10px;
+            text-decoration: none;
+            /* Remove underlines from anchor tags */
+        }
+        
+        .social-icon img {
+            transition: transform 0.2s;
+        }
+        
+        .social-icon:hover img {
+            transform: scale(1.2);
+            /* Increase size on hover */
+        }
+        
+        .footer {
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .navbar {
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1;
+            position: fixed;
+            width: 100%;
+        }
+        
+        .logo {
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: #22CC88;
+        }
+        
+        .web-pages {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .search-button {
+            background-color: #FF3355;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .search-button:hover {
+            background-color: #22CC88;
+        }
+        
+        .web-page {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+        }
+        
+        .web-page.active {
+            background-color: #FF3355;
+            /* Change the background color for the active link */
+            color: white;
+            /* Change the text color for the active link */
+        }
+        
+        .web-page:hover {
+            background-color: #FF3355;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+        
+        .search-button {
+            background-color: #FF3355;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        
+        h1 {
+            color: #FF3355;
+            text-align: center;
+            font-size: 28px;
+            /* Increased font size for titles */
+        }
+        
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .content-side {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .media-side {
+            flex: 1;
+        }
+        
+        .section {
+            margin: 20px 0;
+        }
+        
+        .section-header {
+            font-size: 24px;
+            /* Font size for section headers */
+            font-weight: bold;
+            color: #FF3355;
+        }
+        
+        .subsection-header {
+            font-size: 20px;
+            /* Font size for subsection headers */
+            color: #FF3355;
+        }
+        
+        .section-content {
+            text-align: justify;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        
+        .media {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .blog-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .blog-post {
+            margin: 20px 0;
+        }
+        
+        .post-title {
+            font-size: 20px;
+            /* Font size for blog post titles */
+            color: #FF3355;
+        }
+        
+        .post-content {
+            text-align: justify;
+            margin-top: 20px;
+        }
+        
+        .social-media {
+            margin: 20px 0;
+        }
+        
+        .social-icon {
+            font-size: 24px;
+            color: #FF3355;
+            margin: 0 10px;
+        }
+        
+        .pagination {
+            text-align: center;
+        }
+        
+        .page-link {
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: #FF3355;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="logo" href="Home.html">Forexionary <span>F<span style="color: #22CC88;">X</span></span></a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="web-pages">
+            <a class="web-page active" href="Home.html">Home</a>
+            <a class="web-page" href="page 1html.html">Forexionary</a>
+            <a class="web-page" href="about.html">About</a>
+            <a class="web-page" href="faq.html">FAQ</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <h1>Welcome to Forexionary - Your Forex Dictionary</h1>
+
+        <div class="content-container">
+            <div class="content-side">
+                <!-- Section 1: Introduction -->
+                <div class="section">
+                    <div class="section-header">Introduction to Forex Trading</div>
+                    <div class="section-content">
+                        <p>Forex trading, also known as foreign exchange trading or currency trading, is a dynamic and potentially lucrative financial market that enables individuals and institutions to participate in the global exchange of currencies.</p>
+
+                        <p>It represents the largest and most liquid financial market in the world, with a daily turnover exceeding $6 trillion, making it an enticing arena for traders seeking both short-term gains and long-term investment opportunities.</p>
+
+                        <p>In the world of forex, participants speculate on the fluctuations in exchange rates, capitalizing on the constant shifts in the values of various currency pairs.</p>
+
+                        <p>Understanding the intricacies of this market, from the basics of currency pairs to the factors influencing price movements, is essential for anyone looking to navigate the complexities of forex trading successfully.</p>
+
+                        <p>This introductory guide will provide you with a solid foundation, offering insights into the key concepts, strategies, and risk management techniques necessary to embark on your forex trading journey with confidence.</p>
+                    </div>
+                </div>
+
+                <!-- Section 2: Educational Content -->
+                <div class="section">
+                    <div class="section-header">Importance of Understanding Forex Terminologies</div>
+                    <div class="section-content">
+                        <p>Mastering the intricate language of Forex trading is a fundamental aspect of achieving success in this dynamic financial arena. It goes beyond mere familiarity with terms; it's a gateway to gaining confidence in your trading decisions
+                            and becoming a part of the global trading community.</p>
+                        <p>Forex trading involves a diverse and often complex set of terminologies, from understanding currency pairs like EUR/USD to comprehending the significance of pips, leverage, and margin. These terms are not mere jargon; they are
+                            the building blocks of your trading strategy. A solid grasp of Forex terminology enables you to effectively communicate with fellow traders, brokers, and market analysts, ensuring that you're on the same page when discussing
+                            strategies, market trends, and potential opportunities.</p>
+                        <p>Moreover, it helps you navigate the Forex market with precision and confidence. When you know what "long" and "short" mean, or the difference between a "bull" and a "bear" market, you're better equipped to make informed decisions.
+                            Whether you're planning your entry and exit points, managing risk, or analyzing market data, your understanding of Forex terminologies is the compass that guides you through the complexities of trading.</p>
+                        <p>At Forexionary, we recognize the importance of this knowledge. Our platform is dedicated to demystifying these concepts and providing you with a valuable resource to help beginners not only survive but thrive in the Forex world.
+                            So, let's embark on this educational journey together, and soon, you'll find yourself speaking the language of Forex with confidence and a profound sense of belonging.</p>
+                    </div>
+                </div>
+
+
+                <!-- Section 3: Market Updates -->
+                <div class="section">
+                    <div class="section-header">Market Updates</div>
+                    <div class="section-content">
+                        <p>Stay informed about the latest market trends, currency pair analyses, and economic news. Our expert team provides regular updates to keep you in the loop.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-side">
+                <!-- Section 4: Video Tutorials -->
+                <div class="section">
+                    <div class="section-header">Video Tutorials</div>
+                    <div class="section-content">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WiJCR1Nvl6A?si=3kQrTdWndy8w3hwv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Section 5: Blog -->
+                <div class="section blog-section">
+                    <div class="section-header">Forexionary Blog</div>
+                    <div class="blog-post">
+                        <div class="post-title">Exploring Forex Trading Strategies</div>
+                        <iframe src="https://www.capitalindex.com/uk/eng/pages/trading-guides/forex-terminology" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+                        <div class="post-content">
+                            Understand complex forex terminologies to better your forex journey!
+                        </div>
+                    </div>
+                    <div class="section blog-section">
+                        <div class="section-header">Forexionary Blog</div>
+                        <div class="blog-post">
+                            <div class="post-title">Exploring Forex Trading Strategies</div>
+                            <iframe src="https://www.xm.com/education/chapter-1/speak-forex " width="500 " height="300 " frameborder="0 " allowfullscreen>
+                            <div class="post-content">
+                                Understand complex forex terminologies to better your forex journey!
+                            </div>
+                            Effective risk management is essential for Forex success. Explore techniques to protect your capital.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer with Social Media Links -->
+    <div class="footer">
+        <div class="social-icons">
+            <a class="social-icon" href="#"><img src="facebook.png" alt="Capital Inex"></a>
+            <a class="social-icon" href="#"><img src="twitter.png" alt="Forex Today"></a>
+            <a class="social-icon" href="#"><img src="instagram.png" alt="T"></a>
+            <a class="social-icon" href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+</body>
+
+</html>

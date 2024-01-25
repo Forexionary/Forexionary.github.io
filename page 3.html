@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="search.js"></script>
+    <link rel="icon" href="F.png" type="image/x-icon">
+    <title>Forexionary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+        }
+
+        .navbar {
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1; /* Ensure the navigation bar is above other elements */
+            position: fixed; /* Make the navbar stick to the top */
+            width: 100%; /
+        }
+        
+        .search-button {
+        background-color: #FF3355;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .search-button:hover {
+        background-color: #22CC88; /* Change the background color to green on hover */
+    }
+
+        .logo {
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #22CC88;
+        }
+
+        .web-pages {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .web-page {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+        }
+
+        .web-page:hover {
+            background-color: #FF3355;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+            background-color: #FF3355;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .web-page.active {
+    background-color: #FF3355; /* Change the background color for the active link */
+    color: white; /* Change the text color for the active link */
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="logo" href="Home.html">Forexionary <span>F<span style="color: #22CC88;">X</span></span></a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="web-pages">
+            <a class="web-page" href="Home.html">Home</a>
+            <a class="web-page active" href="page 1html.html">Forexionary</a>
+            <a class="web-page" href="about.html">About</a>
+            <a class="web-page" href="faq.html">FAQ</a>
+        </div>
+    </div>
+</body>
+</html>
+<br>
+<br>
+<br>
+    <title>Forexionary - Forex Dictionary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #FF3355;
+            text-align: center;
+        }
+        .term-box {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #000;
+    transition: all 0.3s; /* Add smooth transition for animation */
+        }
+
+        /* Style for hover effect */
+        .term-box:hover {
+            transform: translateX(10px); /* Move forward 10px on hover */
+            background-color: #e03e3e; /* Change background color on hover */
+        }
+
+        .term-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .term {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .definition {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .term-media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .media {
+            max-width: 45%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .pagination {
+            text-align: center;
+        }
+                .term-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .term-box .term {
+            font-weight: bold;
+        }
+
+        .term-box .media-container {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+        }
+
+        .term-box .media-container img {
+            max-width: 560px;
+            height: auto;
+        }
+
+        .term-box .media-container video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .term-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .term-box .term {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .term-box .definition {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .term-box .term-media {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .term-box .term-media .media {
+            max-width: 45%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Forexionary - Forex Dictionary</h1>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Currency Swap
+            </div>
+            <div class="definition">
+                Definition: A "currency swap" is a financial agreement between two parties to exchange principal and interest in one currency for the same in another currency. It is often used for risk management or to access better interest rates.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Slippage
+            </div>
+            <div class="definition">
+                Definition: "Slippage" is the difference between the expected price of a trade and the price at which it is executed. It can occur during fast-moving markets or due to broker delays.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Drawdown
+            </div>
+            <div class="definition">
+                Definition: "Drawdown" represents the peak-to-trough decline during a specific trading period. It measures the percentage loss in a trading account from its highest point.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Scalping
+            </div>
+            <div class="definition">
+                Definition: "Scalping" is a short-term trading strategy where traders aim to make small profits by rapidly entering and exiting trades, often within seconds or minutes.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Fibonacci Retracement
+            </div>
+            <div class="definition">
+                Definition: "Fibonacci retracement" is a technical analysis tool that helps identify potential support and resistance levels based on key Fibonacci ratios, often used to predict price reversals.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Risk-Reward Ratio
+            </div>
+            <div class="definition">
+                Definition: The "risk-reward ratio" is a measure of potential profit relative to potential loss in a trade. It is used to assess the risk and reward of a trading strategy.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Carry Currency
+            </div>
+            <div class="definition">
+                Definition: A "carry currency" is a currency with a high-interest rate that is often used in a carry trade, where traders borrow in low-interest currencies to invest in high-interest currencies.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Central Bank Intervention
+            </div>
+            <div class="definition">
+                Definition: "Central bank intervention" refers to actions taken by a country's central bank to influence its currency's exchange rate, such as buying or selling its own currency in the foreign exchange market.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Technical Indicator
+            </div>
+            <div class="definition">
+                Definition: A "technical indicator" is a mathematical calculation used to forecast price movements or market conditions in forex trading, such as moving averages, RSI, or MACD.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Cross Currency Pair
+            </div>
+            <div class="definition">
+                Definition: A "cross currency pair" is a currency pair that does not include the U.S. dollar. It involves trading two major currencies without the need for the USD.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Order Book
+            </div>
+            <div class="definition">
+                Definition: An "order book" is a real-time list of buy and sell orders in the market for a specific currency pair, providing insight into supply and demand.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Forex Signal
+            </div>
+            <div class="definition">
+                Definition: A "forex signal" is a recommendation to enter or exit a trade, typically generated by a professional trader or trading software. It provides guidance to other traders.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Moving Average
+            </div>
+            <div class="definition">
+                Definition: A "moving average" is a statistical calculation used to analyze and smooth out price data over a specific period. It helps identify trends and potential entry or exit points.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Carry Trade
+            </div>
+            <div class="definition">
+                Definition: A "carry trade" is a trading strategy where an investor borrows money in a currency with a low-interest rate and invests it in a currency with a higher interest rate to profit from the interest rate differential.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Hedging
+            </div>
+            <div class="definition">
+                Definition: "Hedging" is a risk management strategy that involves opening a position to offset potential losses in another position. It aims to reduce overall risk.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Carry Trade
+            </div>
+            <div class="definition">
+                Definition: A "carry trade" is a trading strategy where an investor borrows money in a currency with a low-interest rate and invests it in a currency with a higher interest rate to profit from the interest rate differential.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Margin Call
+            </div>
+            <div class="definition">
+                Definition: A "margin call" is a request from a broker to deposit additional funds into an account when losses exceed available margin. Failure to meet a margin call may result in positions being closed.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Liquidity Provider
+            </div>
+            <div class="definition">
+                Definition: A "liquidity provider" is a financial institution that offers buy and sell quotes for financial instruments, helping ensure market liquidity and efficient trade execution.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Candlestick Chart
+            </div>
+            <div class="definition">
+                Definition: A "candlestick chart" is a type of chart used in technical analysis that displays price movements and patterns. Each "candle" represents a specific time frame and provides information on open, high, low, and close prices.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Fundamental Analysis
+            </div>
+            <div class="definition">
+                Definition: "Fundamental analysis" is an approach to analyzing the forex market that focuses on economic and political factors, such as economic indicators, interest rates, and government policies.
+            </div>
+        </div>
+        
+        <div class="term-box">
+            <div class="term">
+                Term: Leverage
+            </div>
+            <div class="definition">
+                Definition: "Leverage" allows traders to control a larger position with a smaller amount of capital. While it can amplify profits, it also increases the potential for losses and should be used with caution.
+            </div>
+        </div>
+        
+        
+        <!-- Add more terms, definitions, images, and videos as needed -->
+
+        <div class="pagination">
+            <a class="page-link active" href="page 1html.html">1</a>
+            <a class="page-link" href="page 2.html">2</a>
+            <a class="page-link" href="page 3.html">3</a>
+            <a class="page-link" href="page 4.html">3</a>
+            <!-- Add more page links as needed -->
+        </div>
+    </div>
+    <script src="active page.js"></script>
+</body>
+</html>

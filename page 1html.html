@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="search.js"></script>
+    <link rel="icon" href="F.png" type="image/x-icon">
+    <title>Forexionary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+        }
+        
+        .navbar {
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1;
+            /* Ensure the navigation bar is above other elements */
+            position: fixed;
+            /* Make the navbar stick to the top */
+            width: 100%;
+            /
+        }
+        
+        .search-button {
+            background-color: #FF3355;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .search-button:hover {
+            background-color: #22CC88;
+            /* Change the background color to green on hover */
+        }
+        
+        .logo {
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: #22CC88;
+        }
+        
+        .web-pages {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .web-page {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+        }
+        
+        .web-page.active {
+            background-color: #FF3355;
+            /* Change the background color for the active link */
+            color: white;
+            /* Change the text color for the active link */
+        }
+        
+        .web-page:hover {
+            background-color: #FF3355;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+        
+        .search-button {
+            background-color: #FF3355;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="logo" href="Home.html">Forexionary <span>F<span style="color: #22CC88;">X</span></span></a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="web-pages">
+            <a class="web-page" href="Home.html">Home</a>
+            <a class="web-page active" href="page 1html.html">Forexionary</a>
+            <a class="web-page" href="about.html">About</a>
+            <a class="web-page" href="faq.html">FAQ</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<br>
+<br>
+<br>
+<title>Forexionary - Forex Dictionary</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(45deg, #FF3355, #22CC88);
+        color: white;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+    
+    h1 {
+        color: #FF3355;
+        text-align: center;
+    }
+    
+    .term-box {
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid #000;
+        transition: all 0.3s;
+        /* Add smooth transition for animation */
+    }
+    /* Style for hover effect */
+    
+    .term-box:hover {
+        transform: translateX(10px);
+        /* Move forward 10px on hover */
+        background-color: #e03e3e;
+        /* Change background color on hover */
+    }
+    
+    .term-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    
+    .term {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+    .definition {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    
+    .term-media {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .media {
+        max-width: 45%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    
+    .pagination {
+        text-align: center;
+    }
+    
+    .term-box {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .term-box .term {
+        font-weight: bold;
+    }
+    
+    .term-box .media-container {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+    
+    .term-box .media-container img {
+        max-width: 560px;
+        height: auto;
+    }
+    
+    .term-box .media-container video {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .term-box {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .term-box .term {
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+    .term-box .definition {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    
+    .term-box .term-media {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .term-box .term-media .media {
+        max-width: 45%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Forexionary - Forex Dictionary</h1>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Pip (Percentage in Point)
+            </div>
+            <div class="definition">
+                Definition: A "pip" is the smallest price move that a given exchange rate can make based on market convention. It represents the fourth decimal place in most currency pairs.
+                <br><br> Example: If the EUR/USD exchange rate moves from 1.1000 to 1.1001, it has moved up by one pip.
+            </div>
+            <div class="media-container">
+                <img src="https://bpcdn.co/images/2011/03/02140929/What-is-a-Pip-Forex-Lesson.png" alt="Pip Image">
+                <iframe width="320" height="240" src="https://www.youtube.com/embed/vqYGdEFEy2s?si=MMAcXOWIJGIEiYeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Lot
+            </div>
+            <div class="definition">
+                Definition: A "lot" is a standardized quantity of a financial instrument in a forex trade. It is used to control the size of a position and determine the amount of currency being traded.
+                <br><br> Example: Trading one standard lot in the EUR/USD currency pair is equivalent to trading 100,000 Euros.
+            </div>
+            <div class="media-container">
+                <img src="lot.png" alt="Pip Image">
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Margin
+            </div>
+            <div class="definition">
+                Definition: "Margin" refers to the amount of money or collateral required by a forex broker from the trader to open and maintain a position. It allows traders to control a larger position with a relatively small amount of capital.
+                <br><br> Example: If you want to trade one standard lot of EUR/USD, the broker may require you to have $1,000 in your account as margin.
+            </div>
+            <div class="media-container">
+                <img src="margin.webp" alt="Pip Image">
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Leverage
+            </div>
+            <div class="definition">
+                Definition: "Leverage" is the ratio of a trader's capital to the size of the position they can control. It magnifies both potential profits and potential losses.
+                <br><br> Example: With 100:1 leverage, a trader can control a $100,000 position with $1,000 of their own capital.
+            </div>
+            <div class="media-container">
+                <img src="leverage.png" alt="Pip Image">
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Currency Pair
+            </div>
+            <div class="definition">
+                Definition: A "currency pair" is the quotation of two different currencies in forex trading. It expresses the value of one currency in terms of another.
+                <br><br> Example: In the EUR/USD pair, EUR is the base currency, and USD is the quote currency. If the exchange rate is 1.1000, it means 1 Euro is equal to 1.1000 US Dollars.
+            </div>
+            <div class="media-container">
+                <img src="pair.jpg" alt="Pip Image">
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Base Currency
+            </div>
+            <div class="definition">
+                Definition: The "base currency" is the first currency in a currency pair. It represents the unit in which an account is held and against which the exchange rate is quoted.
+                <br><br> Example: In the USD/JPY pair, USD is the base currency. If the exchange rate is 110.50, it means 1 US Dollar is worth 110.50 Japanese Yen.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Quote Currency
+            </div>
+            <div class="definition">
+                Definition: The "quote currency" is the second currency in a currency pair. It is the currency in which the exchange rate is quoted.
+                <br><br> Example: In the GBP/USD pair, GBP is the quote currency. If the exchange rate is 1.3000, it means 1 British Pound is equal to 1.3000 US Dollars.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Spread
+            </div>
+            <div class="definition">
+                Definition: The "spread" is the difference between the bid price (the price at which you can sell) and the ask price (the price at which you can buy) of a currency pair.
+                <br><br> Example: If the EUR/USD pair has a bid price of 1.0999 and an ask price of 1.1001, the spread is 2 pips.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Long
+            </div>
+            <div class="definition">
+                Definition: A "long" position is when a trader buys a currency pair with the expectation that its value will rise over time.
+                <br><br> Example: You go long on EUR/USD at 1.1000, expecting the exchange rate to increase, and later close the position at 1.1100 for a profit.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Short
+            </div>
+            <div class="definition">
+                Definition: A "short" position is when a trader sells a currency pair with the expectation that its value will fall over time.
+                <br><br> Example: You go short on USD/JPY at 110.50, expecting the exchange rate to decrease, and later close the position at 110.00 for a profit.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Stop-Loss
+            </div>
+            <div class="definition">
+                Definition: A "stop-loss" order is an order placed by a trader to limit potential losses by automatically closing a position when a specified price is reached.
+                <br><br> Example: You set a stop-loss order at 1.0950 when you go long on EUR/USD at 1.1000. If the price reaches 1.0950, the trade will automatically close to limit your losses.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Take Profit
+            </div>
+            <div class="definition">
+                Definition: A "take profit" order is an order placed by a trader to lock in profits by automatically closing a position when a specified price is reached.
+                <br><br> Example: You set a take profit order at 1.1100 when you go long on EUR/USD at 1.1000. If the price reaches 1.1100, the trade will automatically close to secure your profits.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Equity
+            </div>
+            <div class="definition">
+                Definition: "Equity" in forex trading refers to the current account balance plus or minus any unrealized profit or loss from open positions.
+                <br><br> Example: If your account has a balance of $10,000 and you have open positions with a combined profit of $1,000, your equity is $11,000.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Bull Market
+            </div>
+            <div class="definition">
+                Definition: A "bull market" is characterized by rising prices and investor optimism. It indicates a strong uptrend in the market.
+                <br><br> Example: During a bull market, stock prices generally rise, and investors have confidence in the economy's positive outlook.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Bear Market
+            </div>
+            <div class="definition">
+                Definition: A "bear market" is characterized by falling prices and investor pessimism. It indicates a strong downtrend in the market.
+                <br><br> Example: In a bear market, asset prices often decline, leading to uncertainty and a negative sentiment among investors.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Fundamental Analysis
+            </div>
+            <div class="definition">
+                Definition: "Fundamental analysis" is the study of economic, social, and political factors that can influence currency prices. It is used to make long-term predictions about currency movements.
+                <br><br> Example: Fundamental analysts study economic indicators, interest rates, and geopolitical events to assess a currency's future value.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Technical Analysis
+            </div>
+            <div class="definition">
+                Definition: "Technical analysis" involves analyzing historical price charts and using various technical indicators to make short-term predictions about currency movements.
+                <br><br> Example: Technical analysts use charts and patterns to identify entry and exit points for their trades based on historical price data.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Liquidity
+            </div>
+            <div class="definition">
+                Definition: "Liquidity" refers to the ease with which an asset, such as a currency pair, can be bought or sold without affecting its price significantly.
+                <br><br> Example: Major currency pairs like EUR/USD tend to have high liquidity, meaning they can be traded in large volumes without significant price fluctuations.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Currency Correlation
+            </div>
+            <div class="definition">
+                Definition: "Currency correlation" is a statistical measure of how different currency pairs move in relation to each other. It helps traders diversify their portfolios.
+                <br><br> Example: If two currency pairs have a positive correlation, they often move in the same direction. Traders may use this information to manage risk in their portfolios.
+            </div>
+        </div>
+
+        <div class="term-box">
+            <div class="term">
+                Term: Volatility
+            </div>
+            <div class="definition">
+                Definition: "Volatility" in forex trading represents the degree of variation in a currency pair's value over time. High volatility can lead to rapid price fluctuations.
+                <br><br> Example: During major economic announcements, currency pairs may experience high volatility, leading to quick and significant price changes.
+            </div>
+        </div>
+
+        <!-- Add more terms, definitions, images, and videos as needed -->
+
+        <div class="pagination">
+            <a class="page-link active" href="page 1html.html">1</a>
+            <a class="page-link" href="page 2.html">2</a>
+            <a class="page-link" href="page 3.html">3</a>
+            <a class="page-link" href="page 4.html">3</a>
+            <!-- Add more page links as needed -->
+        </div>
+    </div>
+    <script src="active page.js"></script>
+</body>
+
+</html>

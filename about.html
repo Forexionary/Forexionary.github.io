@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forexionary</title>
+    <script src="search.js"></script>
+    <link rel="icon" href="F.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+        }
+        
+        .navbar {
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: #22CC88;
+        }
+        
+        .web-pages {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .web-page {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+        }
+        
+        .web-page:hover {
+            background-color: #FF3355;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+        
+        .search-button {
+            background-color: #FF3355;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .search-button:hover {
+            background-color: #22CC88;
+            /* Change the background color to green on hover */
+        }
+        
+        .web-page.active {
+            background-color: #FF3355;
+            /* Change the background color for the active link */
+            color: white;
+            /* Change the text color for the active link */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="logo" href="Home.html">Forexionary <span>F<span style="color: #22CC88;">X</span></span></a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="web-pages">
+            <a class="web-page" href="Home.html">Home</a>
+            <a class="web-page" href="page 1html.html">Forexionary</a>
+            <a class="web-page active" href="about.html">About</a>
+            <a class="web-page" href="faq.html">FAQ</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<title>About Us - Forexionary</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(45deg, #FF3355, #22CC88);
+        color: white;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+    
+    h1 {
+        color: #FF3355;
+        text-align: center;
+    }
+    
+    .section {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .success-message {
+        display: none;
+        background-color: #22CC88;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .contact-form {
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .form-field {
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    .form-label {
+        font-weight: bold;
+        display: block;
+    }
+    
+    .form-input,
+    .form-textarea {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid #FF3355;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form-textarea {
+        height: 100px;
+    }
+    
+    .form-submit {
+        background-color: #FF3355;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    
+    .form-submit:hover {
+        background-color: #22CC88;
+    }
+    
+    .success-message {
+        display: none;
+        background-color: #22CC88;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <div class="section">
+            <p class="section-title">Our Mission</p>
+            <p>We are dedicated to providing the highest quality education and resources for forex traders, from beginners to experts. Our mission is to empower individuals to achieve success in the forex market through knowledge, practice, and innovation.</p>
+        </div>
+        <div class="section">
+            <p class="section-title">About Forexionary</p>
+            <img class="ceo-image" src="F.png" alt="CEO Image">
+        </div>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="section">
+                <div class="success-message" id="successMessage">Message sent successfully!</div>
+                <form action="database.php" method="post">
+                    <div class="contact-form">
+                        <div class="form-field">
+                            <label class="form-label" for="name">Name:</label>
+                            <input class="form-input" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="email">Email:</label>
+                            <input class="form-input" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="message">Message:</label>
+                            <textarea class="form-textarea" id="message" name="message" required></textarea>
+                        </div>
+                        <button class="form-submit" id="submitButton" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <script>
+                function submitForm() {
+                    // Simulate form submission (you can replace this with actual form submission logic)
+                    // For demonstration purposes, we'll show a success message after a brief delay
+                    document.getElementById("successMessage").style.display = "block";
+                    setTimeout(function() {
+                        document.getElementById("successMessage").style.display = "none";
+                        // You can redirect to another page or perform other actions here
+                    }, 3000);
+                }
+            </script>
+        </div>
+        <script></script>
+</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forexionary</title>
+    <script src="search.js"></script>
+    <link rel="icon" href="F.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+        }
+
+        .navbar {
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #22CC88;
+        }
+
+        .web-pages {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .web-page {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 20px;
+        }
+
+        .web-page:hover {
+            background-color: #FF3355;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 10px;
+        }
+
+        .search-button {
+        background-color: #FF3355;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .search-button:hover {
+        background-color: #22CC88; /* Change the background color to green on hover */
+    }
+    .web-page.active {
+    background-color: #FF3355; /* Change the background color for the active link */
+    color: white; /* Change the text color for the active link */
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="logo" href="Home.html">Forexionary <span>F<span style="color: #22CC88;">X</span></span></a>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        <div class="web-pages">
+            <a class="web-page" href="Home.html">Home</a>
+            <a class="web-page" href="page 1html.html">Forexionary</a>
+            <a class="web-page" href="about.html">About</a>
+            <a class="web-page active" href="faq.html">FAQ</a>
+        </div>
+    </div>
+
+    <title>FAQ - Forexionary</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #FF3355, #22CC88);
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #FF3355;
+            text-align: center;
+        }
+
+        .faq {
+            margin-top: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .answer {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq">
+            <div class="question">Q: What is Forexionary?</div>
+            <div class="answer">A: Forexionary is your ultimate resource for mastering the art of forex trading. We offer comprehensive educational materials and tools to help you succeed in the forex market.</div>
+
+            <div class="question">Q: How can I get started with forex trading?</div>
+            <div class="answer">A: Getting started is easy. Sign up with a reputable forex broker, study our educational content, and practice using a demo account to gain the necessary skills and confidence.</div>
+
+            <div class="question">Q: Is forex trading risky?</div>
+            <div class="answer">A: Forex trading carries inherent risks. It's important to educate yourself and use risk management strategies to protect your investments.</div>
+
+            <div class="question">Q: How can I contact Forexionary for support?</div>
+            <div class="answer">A: You can reach our support team through the "Contact Us" page on our website. We're here to assist you every step of the way.</div>
+        </div>
+    </div>
+</body>
+</html>
